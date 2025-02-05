@@ -20,16 +20,16 @@
 
     - name: Copy shell script to remote server
       copy:
-        src: docker-container-condition.sh
-        dest: /home/ubuntu/secretsanta-generator/docker-container-condition.sh
+        src: docker-condition.sh
+        dest: /home/ubuntu/secretsanta-generator/docker-condition.sh
 
     - name: Permissions on shell script
-      command: chmod +x docker-container-condition.sh
+      command: chmod +x docker-condition.sh
       args:
         chdir: /home/ubuntu/secretsanta-generator
 
     - name: Execute shell script
-      command: ./docker-container-condition.sh
+      command: ./docker-condition.sh
       args:
         chdir: /home/ubuntu/secretsanta-generator
 
